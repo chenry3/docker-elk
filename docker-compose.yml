@@ -19,6 +19,7 @@ services:
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml
       - ./logstash/pipeline:/usr/share/logstash/pipeline
+      - /data/rsyslog:/data/rsyslog
     ports:
       - "5000:5000"
     environment:
